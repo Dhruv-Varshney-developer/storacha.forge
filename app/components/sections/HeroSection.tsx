@@ -1,11 +1,11 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import Link from 'next/link'
-import { useState } from 'react'
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function HeroSection() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <section className="bg-[#C5DFFD] relative min-h-screen overflow-hidden">
@@ -34,14 +34,24 @@ export default function HeroSection() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center border-2 border-[#0176CE] rounded-full p-2">
-            <Link href="#product" className="bg-white text-[#0176CE] px-6 py-3 rounded-full font-medium text-xl">
+          <div className="hidden lg:flex items-center gap-2 border-2 border-[#0176CE] rounded-full p-2">
+            {" "}
+            <Link
+              href="#product"
+              className="bg-white text-[#0176CE] px-6 py-3 rounded-full font-medium text-xl"
+            >
               PRODUCT
             </Link>
-            <Link href="#pricing" className="bg-white text-[#0176CE] px-6 py-3 rounded-full font-medium text-xl">
+            <Link
+              href="#pricing"
+              className="bg-white text-[#0176CE] px-6 py-3 rounded-full font-medium text-xl"
+            >
               PRICING
             </Link>
-            <Link href="#get-started" className="bg-[#0176CE] text-white px-6 py-3 rounded-full text-xl hover:bg-[#0089F0] transition-colors">
+            <Link
+              href="#get-started"
+              className="bg-[#0176CE] text-white px-6 py-3 rounded-full text-xl hover:bg-[#0089F0] transition-colors"
+            >
               GET STARTED
             </Link>
           </div>
@@ -63,9 +73,24 @@ export default function HeroSection() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg py-4 px-6 space-y-4">
-            <Link href="#product" className="block py-2 text-[#0176CE] font-medium">PRODUCT</Link>
-            <Link href="#pricing" className="block py-2 text-[#0176CE] font-medium">PRICING</Link>
-            <Link href="#get-started" className="block py-2 text-[#0176CE] font-medium">GET STARTED</Link>
+            <Link
+              href="#product"
+              className="block py-2 text-[#0176CE] font-medium"
+            >
+              PRODUCT
+            </Link>
+            <Link
+              href="#pricing"
+              className="block py-2 text-[#0176CE] font-medium"
+            >
+              PRICING
+            </Link>
+            <Link
+              href="#get-started"
+              className="block py-2 text-[#0176CE] font-medium"
+            >
+              GET STARTED
+            </Link>
           </div>
         )}
       </header>
@@ -74,15 +99,17 @@ export default function HeroSection() {
       <div className="container-custom relative z-10 pt-20 pb-32">
         <div className="flex flex-col gap-10 max-w-4xl">
           <h1 className="font-epilogue font-medium text-5xl lg:text-[72px] leading-[1.2] text-[#0176CE] tracking-[-2.88px]">
-            Cut Cloud Backup Costs by <span className="text-[#E91315]">80%.</span><br />
+            Cut Cloud Backup Costs by{" "}
+            <span className="text-[#E91315]">80%.</span>
+            <br />
             Keep Full Control of Your Data.
           </h1>
-          
+
           <p className="font-dm-sans text-2xl lg:text-[28px] text-[#0176CE] leading-relaxed max-w-3xl">
-            Decentralized backup & archival for enterprises, secure, verifiable, 
+            Decentralized backup & archival for enterprises, secure, verifiable,
             zero lock-in. Your data, governed by protocol, not corporations.
           </p>
-          
+
           <button className="btn-primary w-fit">
             <Image
               src="/forge/hero/cta-arrow-icon.svg"
@@ -95,5 +122,5 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
