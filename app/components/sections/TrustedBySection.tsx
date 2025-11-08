@@ -2,10 +2,10 @@ import Image from 'next/image'
 
 export default function TrustedBySection() {
   const partners = [
-    { name: 'Filecoin', logo: '/forge/partners/filecoin.png' },
     { name: 'Harvard', logo: '/forge/partners/harvard.png' },
-    { name: 'Infura', logo: '/forge/partners/infura.png' },
+    { name: 'Filecoin', logo: '/forge/partners/filecoin.png' },
     { name: 'Solana', logo: '/forge/partners/solana.png' },
+    { name: 'Infura', logo: '/forge/partners/infura.png' },
     { name: 'Parasail', logo: '/forge/partners/parasail.png' },
   ]
 
