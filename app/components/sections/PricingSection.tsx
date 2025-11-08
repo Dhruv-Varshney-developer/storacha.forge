@@ -16,7 +16,7 @@ export default function PricingSection() {
           </div>
 
           <div className="relative">
-            <div className="border border-[#0089F0] rounded-[40px] p-10 w-full max-w-[800px] bg-white/50 relative">
+            <div className="border border-[#0089F0] rounded-[40px] p-10 w-full  bg-white/50 relative">
               <div className="space-y-8 text-left">
                 <p className="font-dm-sans font-medium text-[26px] text-[#0089F0]">
                   Reserved Capacity Plan
