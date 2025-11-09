@@ -172,28 +172,6 @@ export default function CostComparisonSection() {
                       height={40}
                       className="mt-3 h-8 w-auto object-contain"
                     />
-
-                    {/* Red arrow pointing from Wasabi to Storacha */}
-                    {index === 3 && (
-                      <div className="absolute top-[40px] -right-[30px] z-10">
-                        <svg
-                          width="60"
-                          height="60"
-                          viewBox="0 0 60 60"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10 20 Q 30 10, 45 25 L 40 20 M 45 25 L 40 28"
-                            stroke="#E91315"
-                            strokeWidth="3"
-                            fill="none"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </div>
-                    )}
                   </div>
                 ))}
               </div>
