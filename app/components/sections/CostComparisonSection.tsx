@@ -27,22 +27,6 @@ export default function CostComparisonSection() {
       ownership: false,
       verifiability: false,
     },
-    {
-      name: "Azure",
-      logo: "/forge/cost-comparison/azure.svg",
-      storage: "$15.00",
-      egress: "$87",
-      ownership: false,
-      verifiability: false,
-    },
-    {
-      name: "Wasabi",
-      logo: "/forge/cost-comparison/wasabi.svg",
-      storage: "$6.99",
-      egress: "$0",
-      ownership: false,
-      verifiability: false,
-    },
   ];
 
   const chartData = [
@@ -177,7 +161,7 @@ export default function CostComparisonSection() {
                       className={`w-[60px] rounded-t-xl transition-all duration-300 ${
                         item.highlight
                           ? "bg-[#0176CE]"
-                          : "bg-gradient-to-t from-[#0176CE] via-[#7FBFFF] via-70% to-white"
+                          : "bg-gradient-to-b from-white via-[#aedcff] to-[#0176CE]"
                       }`}
                       style={{ height: `${item.height}px` }}
                     />
