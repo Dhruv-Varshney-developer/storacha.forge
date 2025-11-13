@@ -18,79 +18,87 @@ export default function PricingSection() {
             </p>
           </div>
 
-          <div className="relative">
-            <div className="border border-[#0089F0] rounded-[40px] p-10 w-full  bg-white/50 relative">
-              <div className="space-y-8 text-left">
-                <p className="font-dm-sans font-medium text-[26px] text-[#0089F0]">
-                  Reserved Capacity Plan
-                </p>
+          <div className="flex flex-col items-center gap-4">
+            <div className="relative">
+              <div className="border border-[#0089F0] rounded-[40px] p-10 w-full  bg-white/50 relative">
+                <div className="space-y-8 text-left">
+                  <p className="font-dm-sans font-medium text-lg md:text-[26px] text-[#0089F0]">
+                    Reserved Capacity Plan
+                  </p>
 
-                <p className="font-epilogue font-semibold text-[60px] text-[#0089F0] tracking-[-1.82px]">
-                  $5.99 <span className="text-2xl font-normal">/TiB/Month</span>
-                </p>
+                  <p className="font-epilogue font-semibold text-5xl md:text-[60px] text-[#0089F0] tracking-[-1.82px]">
+                    $5.99{" "}
+                    <span className="text-base md:text-xl font-normal">/TiB/Month</span>
+                  </p>
 
-                <div className="space-y-4 text-left max-w-md mx-auto">
-                  <div className="flex items-center gap-3">
-                    <Image
-                      src="/forge/pricing/checkmark.svg"
-                      alt=""
-                      width={24}
-                      height={24}
-                    />
-                    <p className="font-dm-sans font-medium text-[18px] text-[#0089F0]">
-                      Capacity Billing
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Image
-                      src="/forge/pricing/checkmark.svg"
-                      alt=""
-                      width={24}
-                      height={24}
-                    />
-                    <p className="font-dm-sans font-medium text-[18px] text-[#0089F0]">
-                      Egress: $10/TiB
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Image
-                      src="/forge/pricing/checkmark.svg"
-                      alt=""
-                      width={24}
-                      height={24}
-                    />
-                    <p className="font-dm-sans font-medium text-[18px] text-[#0089F0]">
-                      Data Ingress: Free for 18+ month contracts
-                    </p>
+                  <div className="space-y-4 text-left max-w-md mx-auto">
+                    <div className="flex items-center gap-3">
+                      <Image
+                        src="/forge/pricing/checkmark.svg"
+                        alt=""
+                        width={24}
+                        height={24}
+                      />
+                      <p className="font-dm-sans font-medium text-[18px] text-[#0089F0]">
+                        Capacity Billing
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Image
+                        src="/forge/pricing/checkmark.svg"
+                        alt=""
+                        width={24}
+                        height={24}
+                      />
+                      <p className="font-dm-sans font-medium text-[18px] text-[#0089F0]">
+                        Egress: $10/TiB
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Image
+                        src="/forge/pricing/checkmark.svg"
+                        alt=""
+                        width={24}
+                        height={24}
+                      />
+                      <p className="font-dm-sans font-medium text-[18px] text-[#0089F0]">
+                        Data Ingress: Free for 18+ month contracts
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="absolute top-0 right-0  ">
-                <Image
-                  src="/forge/pricing/savings.svg"
-                  alt="80% Savings"
-                  width={175}
-                  height={157}
-                />
+                <div className="absolute top-0 right-0">
+                  <Image
+                    src="/forge/pricing/savings.svg"
+                    alt="80% Savings"
+                    width={175}
+                    height={157}
+                    className="w-[120px] h-[108px] md:w-[175px] md:h-[157px]"
+                  />
+                </div>
               </div>
             </div>
+
+            <p className="font-dm-sans text-[18px] text-[#0089F0] text-center max-w-[500px]">
+              *After 18 months, transition your data to cold storage for $1/TB
+              on archival data you access infrequently.
+            </p>
           </div>
 
-          <p className="font-dm-sans text-[22px] text-[#0089F0] text-center max-w-[600px]">
-            *After 18 months, transition your data to cold storage for $1/TB on
-            archival data you access infrequently.
-          </p>
-
-          <Link href={MEETING_URL} className="btn-primary w-fit">
-            <Image
-              src="/forge/hero/cta-arrow-icon.svg"
-              alt=""
-              width={24}
-              height={24}
-            />
-            <span>Get Your Custom Storage Plan</span>
-          </Link>
+          <Link 
+  href={MEETING_URL} 
+  className="btn-primary w-fit !text-sm sm:!text-xl !px-4 sm:!px-7 !py-2.5 sm:!py-3.5"
+>
+  <Image
+    src="/forge/hero/cta-arrow-icon.svg"
+    alt=""
+    width={24}
+    height={24}
+    className="w-5 h-5 sm:w-6 sm:h-6"
+  />
+  <span>Get Your Custom Storage Plan</span>
+</Link>
         </div>
       </div>
     </section>
