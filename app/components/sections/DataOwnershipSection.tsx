@@ -4,11 +4,14 @@ import { MEETING_URL } from "@/lib/constants";
 
 export default function DataOwnershipSection() {
   return (
-    <section id="data-ownership" className="bg-[#0176CE] relative overflow-hidden py-20">
+    <section
+      id="data-ownership"
+      className="bg-[#0176CE] relative overflow-hidden py-10 md:py-16 lg:py-20"
+    >
       <div className="container-custom">
         {/* Heading - Full Width */}
-        <div className="text-white mb-16">
-          <h2 className="font-epilogue font-medium text-5xl lg:text-[72px] leading-[1.2] tracking-[-2.88px]">
+        <div className="text-white mb-8 md:mb-12 lg:mb-16">
+          <h2 className="font-epilogue font-medium text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[72px] leading-[1.2] tracking-tight md:tracking-[-1.5px] lg:tracking-[-2.88px]">
             You Own the Data.
             <br />
             You Control the Access.
@@ -16,7 +19,7 @@ export default function DataOwnershipSection() {
         </div>
 
         {/* Content Grid - Image Left, Text Right */}
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-10 lg:gap-12 items-start">
           {/* Left Column - Image */}
           <div className="relative">
             <Image
@@ -29,9 +32,9 @@ export default function DataOwnershipSection() {
           </div>
 
           {/* Right Column - Text + CTA */}
-          <div className="text-white space-y-8">
-            <div className="space-y-6 text-xl lg:text-2xl leading-relaxed">
-              <p className="font-bold text-2xl lg:text-[32px]">
+          <div className="text-white space-y-4 md:space-y-6 lg:space-y-8">
+            <div className="space-y-3 md:space-y-4 lg:space-y-6 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed">
+              <p className="font-bold text-lg sm:text-xl md:text-2xl lg:text-[32px]">
                 Your data. Your keys. Your control.
               </p>
 
@@ -46,15 +49,16 @@ export default function DataOwnershipSection() {
               </p>
             </div>
 
-            <Link 
+            <Link
               href={MEETING_URL}
-              className="bg-[#E91315] text-white px-7 py-3.5 rounded-full font-semibold text-xl flex items-center gap-2.5 hover:bg-red-700 transition-colors w-fit"
+              className="bg-[#E91315] text-white px-4 py-2.5 sm:px-5 sm:py-3 md:px-7 md:py-3.5 rounded-full font-semibold text-sm sm:text-base md:text-lg lg:text-xl flex items-center gap-2 md:gap-2.5 hover:bg-red-700 transition-colors w-fit"
             >
               <Image
                 src="/forge/hero/cta-arrow-icon.svg"
                 alt=""
                 width={20}
                 height={20}
+                className="w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5"
               />
               <span>Talk to your expert</span>
             </Link>

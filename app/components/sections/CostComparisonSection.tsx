@@ -68,7 +68,7 @@ export default function CostComparisonSection() {
       <div className="container-custom">
         <div className="space-y-6 md:space-y-12 lg:space-y-16">
           <div className="text-center">
-            <h2 className="font-epilogue font-medium text-2xl md:text-4xl lg:text-5xl xl:text-[72px] text-[#0176CE] tracking-[-2.88px]">
+            <h2 className="font-epilogue font-medium text-2xl md:text-4xl lg:text-5xl xl:text-[72px] text-[#0176CE] tracking-tight md:tracking-[-1.5px] lg:tracking-[-2.88px]">
               Cost Comparison
             </h2>
           </div>

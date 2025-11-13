@@ -20,7 +20,7 @@ export default function HeroSection() {
         }}
       />
 
-      <header className="container-custom relative z-10 py-6">
+      <header className="container-custom relative z-10 py-3 md:py-6">
         <nav className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Image
@@ -28,7 +28,7 @@ export default function HeroSection() {
               alt="Storacha"
               width={191}
               height={68}
-              className="h-[68px] w-auto"
+              className="h-10 sm:h-12 md:h-[68px] w-auto"
             />
           </div>
 
@@ -58,10 +58,10 @@ export default function HeroSection() {
             className="lg:hidden p-2"
             aria-label="Toggle menu"
           >
-            <div className="space-y-2">
-              <span className="block w-8 h-0.5 bg-[#0176CE]"></span>
-              <span className="block w-8 h-0.5 bg-[#0176CE]"></span>
-              <span className="block w-8 h-0.5 bg-[#0176CE]"></span>
+            <div className="space-y-1.5 md:space-y-2">
+              <span className="block w-6 md:w-8 h-0.5 bg-[#0176CE]"></span>
+              <span className="block w-6 md:w-8 h-0.5 bg-[#0176CE]"></span>
+              <span className="block w-6 md:w-8 h-0.5 bg-[#0176CE]"></span>
             </div>
           </button>
         </nav>
@@ -70,21 +70,21 @@ export default function HeroSection() {
           <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg py-4 px-6 space-y-4">
             <Link
               href="#why"
-              className="block py-2 text-[#0176CE] font-medium"
+              className="block py-2 text-[#0176CE] font-medium text-sm md:text-base"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               PRODUCT
             </Link>
             <Link
               href="#pricing"
-              className="block py-2 text-[#0176CE] font-medium"
+              className="block py-2 text-[#0176CE] font-medium text-sm md:text-base"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               PRICING
             </Link>
             <Link
               href={MEETING_URL}
-              className="block py-2 text-[#0176CE] font-medium"
+              className="block py-2 text-[#0176CE] font-medium text-sm md:text-base"
             >
               GET STARTED
             </Link>
@@ -92,29 +92,31 @@ export default function HeroSection() {
         )}
       </header>
 
-      <div className="container-custom relative z-10 pt-12 pb-20 lg:pt-16 lg:pb-24 xl:pt-20 xl:pb-32">
-        <div className="flex flex-col gap-10 max-w-4xl">
-          <h1 className="font-epilogue font-medium text-4xl lg:text-[56px] leading-[1.15] text-[#0176CE] tracking-[-1px]">
+      <div className="container-custom relative z-10 pt-6 pb-12 md:pt-12 md:pb-20 lg:pt-16 lg:pb-24 xl:pt-20 xl:pb-32">
+        <div className="flex flex-col gap-6 md:gap-10 max-w-4xl">
+          <h1 className="font-epilogue font-medium text-2xl sm:text-3xl md:text-4xl lg:text-[56px] leading-[1.15] text-[#0176CE] tracking-[-1px]">
             Cut Cloud Backup Costs by{" "}
             <span className="text-[#E91315]">80%.</span>
             <br />
             Keep Full Control of Your Data.
           </h1>
 
-          <p className="font-dm-sans text-lg lg:text-[20px] text-[#0176CE] leading-relaxed max-w-2xl">
-            Decentralized backup & archival for enterprises, secure, verifiable,<br />
+          <p className="font-dm-sans text-sm sm:text-base md:text-lg lg:text-[20px] text-[#0176CE] leading-relaxed max-w-2xl">
+            Decentralized backup & archival for enterprises, secure, verifiable,
+            <br className="hidden md:block" />
             zero lock-in. Your data, governed by protocol, not corporations.
           </p>
 
-          <Link 
+          <Link
             href={MEETING_URL}
-            className="btn-primary w-fit"
+            className="bg-[#E91315] text-white px-4 py-2.5 sm:px-6 sm:py-3 md:px-7 md:py-3.5 rounded-full font-semibold text-sm sm:text-base md:text-xl flex items-center gap-2 md:gap-2.5 hover:bg-red-700 transition-colors w-fit"
           >
             <Image
               src="/forge/hero/cta-arrow-icon.svg"
               alt=""
               width={24}
               height={24}
+              className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
             />
             <span>Book a call with an expert</span>
           </Link>
