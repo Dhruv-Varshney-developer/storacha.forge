@@ -33,31 +33,31 @@ export default function CostComparisonSection() {
     {
       company: "Google",
       logo: "/forge/cost-comparison/google.svg",
-      cost: 288756,
+      cost: 6900,
       height: 313,
     },
     {
       company: "Amazon",
       logo: "/forge/cost-comparison/amazon.svg",
-      cost: 251892,
+      cost: 5587,
       height: 248,
     },
     {
       company: "Azure",
       logo: "/forge/cost-comparison/azure.svg",
-      cost: 226104,
+      cost: 3000,
       height: 201,
     },
     {
       company: "Wasabi",
       logo: "/forge/cost-comparison/wasabi.svg",
-      cost: 42960,
+      cost: 2097,
       height: 123,
     },
     {
       company: "Storacha",
       logo: "/forge/cost-comparison/forge.svg",
-      cost: 36857,
+      cost: 1797,
       height: 65,
       highlight: true,
     },
@@ -155,7 +155,7 @@ export default function CostComparisonSection() {
                           : "font-medium text-[16px]"
                       } text-[#0176CE] mb-2 whitespace-nowrap`}
                     >
-                      ${item.cost.toLocaleString()}/yr
+                      ${item.cost.toLocaleString()}/m
                     </p>
                     <div
                       className={`w-[60px] rounded-t-xl transition-all duration-300 ${
