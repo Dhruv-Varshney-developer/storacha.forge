@@ -85,7 +85,7 @@ export default function Footer() {
             </Link>
           </div>
 
-          <span className="text-[#0176CE] font-dm-sans text-xs sm:text-sm md:text-base lg:text-[18px] font-semibold leading-6">
+          <span className="hidden sm:inline text-[#0176CE] font-dm-sans text-xs sm:text-sm md:text-base lg:text-[18px] font-semibold leading-6">
             @2025 Storacha
           </span>
         </div>
