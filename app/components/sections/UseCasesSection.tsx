@@ -69,24 +69,6 @@ export default function UseCasesSection() {
               </div>
             ))}
           </div>
-
-          <div className="flex justify-center">
-            <Link
-              href="https://docs.storacha.network/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#0176CE] text-white px-5 py-3 sm:px-6 sm:py-4 md:px-8 md:py-5 rounded-full font-semibold text-base sm:text-lg md:text-xl lg:text-2xl flex items-center gap-2 md:gap-2.5 hover:bg-[#0089F0] transition-colors w-fit"
-            >
-              <Image
-                src="/forge/use-cases/arrow.svg"
-                alt=""
-                width={24}
-                height={24}
-                className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
-              />
-              <span>View our documentation</span>
-            </Link>
-          </div>
         </div>
       </div>
     </section>
