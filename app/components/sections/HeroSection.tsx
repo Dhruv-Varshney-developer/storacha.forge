@@ -61,7 +61,7 @@ export default function HeroSection() {
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2"
+            className="lg:hidden p-2 relative z-50"
             aria-label="Toggle menu"
           >
             <div className="space-y-1.5 md:space-y-2">
@@ -73,39 +73,53 @@ export default function HeroSection() {
         </nav>
 
         {isMobileMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg py-4 px-6 space-y-4">
-            <Link
-              href="#why"
-              className="block py-2 text-[#0176CE] font-medium text-sm md:text-base"
+          <>
+            {/* Overlay */}
+            <div
+              className="lg:hidden fixed inset-0 bg-black/50 z-30"
               onClick={() => setIsMobileMenuOpen(false)}
-            >
-              FEATURES
-            </Link>
-            <Link
-              href="#pricing"
-              className="block py-2 text-[#0176CE] font-medium text-sm md:text-base"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              PRICING
-            </Link>
-            <Link
-              href="#use-cases"
-              className="block py-2 text-[#0176CE] font-medium text-sm md:text-base"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              USE CASES
-            </Link>
-            <Link
-              href={MEETING_URL}
-              className="block py-2 text-[#0176CE] font-medium text-sm md:text-base"
-            >
-              GET STARTED
-            </Link>
-          </div>
+            />
+
+            {/* Menu */}
+            <div className="lg:hidden fixed top-[64px] left-0 right-0 bottom-0 bg-white z-40 py-8 px-6 flex flex-col gap-6">
+              <Link
+                href="#why"
+                className="text-[#0176CE] font-medium text-lg md:text-xl py-3 border-b border-gray-200"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                FEATURES
+              </Link>
+              <Link
+                href="#pricing"
+                className="text-[#0176CE] font-medium text-lg md:text-xl py-3 border-b border-gray-200"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                PRICING
+              </Link>
+              <Link
+                href="#use-cases"
+                className="text-[#0176CE] font-medium text-lg md:text-xl py-3 border-b border-gray-200"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                USE CASES
+              </Link>
+              <Link
+                href={MEETING_URL}
+                className="bg-[#0176CE] text-white px-6 py-4 rounded-full font-medium text-lg md:text-xl text-center mt-4"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                GET STARTED
+              </Link>
+            </div>
+          </>
         )}
       </header>
 
-      <div className="container-custom relative z-10 pt-6 pb-12 md:pt-12 md:pb-20 lg:pt-16 lg:pb-24 xl:pt-20 xl:pb-32">
+      <div
+        className={`container-custom relative z-10 pt-6 pb-12 md:pt-12 md:pb-20 lg:pt-16 lg:pb-24 xl:pt-20 xl:pb-32 ${
+          isMobileMenuOpen ? "hidden lg:block" : ""
+        }`}
+      >
         <div className="flex flex-col gap-6 md:gap-10 max-w-4xl">
           <h1 className="font-epilogue font-medium text-2xl sm:text-3xl md:text-4xl lg:text-[56px] leading-[1.15] text-[#0176CE] tracking-[-1px]">
             Cut Cloud Backup Costs by{" "}
