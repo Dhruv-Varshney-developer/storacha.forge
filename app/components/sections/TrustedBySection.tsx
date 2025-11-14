@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 "use client";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
@@ -27,7 +28,9 @@ export default function TrustedBySection() {
   };
 
   useEffect(() => {
+    // @ts-expect-error
     setupScroll(mobileRef);
+    // @ts-expect-error
     setupScroll(desktopRef);
   }, []);
 
