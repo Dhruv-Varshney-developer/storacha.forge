@@ -150,9 +150,6 @@ export default function CostComparisonSection() {
           {/* Cost Advantage Section */}
           <div className="grid lg:grid-cols-2 gap-6 md:gap-10 lg:gap-12 items-center">
             <div>
-              <h3 className="font-epilogue font-medium text-lg md:text-2xl lg:text-[32px] text-[#0176CE] mb-3 md:mb-6 lg:mb-8">
-                Your Cost Advantage
-              </h3>
 
               {/* Bar Chart */}
               <div className="relative flex items-end gap-1.5 md:gap-3 lg:gap-4 justify-center px-2 md:px-4">
