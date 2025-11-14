@@ -125,7 +125,7 @@ export default function HeroSection() {
             Cut Cloud Backup Costs by{" "}
             <span className="text-[#E91315]">80%.</span>
             <br />
-            Keep Full Control of Your Data.
+            Gain Full Control of Your Data.
           </h1>
 
           <p className="font-dm-sans text-sm sm:text-base md:text-lg lg:text-[20px] text-[#0176CE] leading-relaxed max-w-2xl">
