@@ -4,7 +4,7 @@ export default function CostComparisonSection() {
   const competitors = [
     {
       name: "Storacha Forge",
-      logo: "/forge/cost-comparison/forge.png",
+      logo: "/forge/cost-comparison/forge.svg",
       storage: "$5.99",
       egress: "$10",
       ownership: true,
@@ -32,7 +32,7 @@ export default function CostComparisonSection() {
   const chartData = [
     {
       company: "Storacha",
-      logo: "/forge/cost-comparison/forge.png",
+      logo: "/forge/cost-comparison/forge.svg",
       cost: 7788,
       height: { mobile: 50, tablet: 82, desktop: 109 },
       highlight: true,
@@ -41,7 +41,7 @@ export default function CostComparisonSection() {
       company: "Wasabi",
       logo: "/forge/cost-comparison/wasabi.svg",
       cost: 8592,
-      height: { mobile: 56, tablet: 91, desktop: 121 },
+      height: { mobile: 84, tablet: 135, desktop: 180 },
     },
     {
       company: "Azure",
@@ -57,7 +57,7 @@ export default function CostComparisonSection() {
     },
     {
       company: "Amazon",
-      logo: "/forge/cost-comparison/amazon.svg",
+      logo: "/forge/cost-comparison/aws.svg",
       cost: 21360,
       height: { mobile: 138, tablet: 225, desktop: 300 },
     },
@@ -105,7 +105,7 @@ export default function CostComparisonSection() {
                         : "bg-white text-[#0176CE]"
                     } rounded-[20px]`}
                   >
-                    <td className="p-1 sm:p-2 md:p-3 lg:p-4 flex items-center gap-0.5 sm:gap-1">
+                    <td className="p-1 sm:p-2 md:p-3 lg:p-4 flex items-center gap-2 sm:gap-3">
                       <Image
                         src={comp.logo}
                         alt={comp.name}
@@ -150,7 +150,6 @@ export default function CostComparisonSection() {
           {/* Cost Advantage Section */}
           <div className="grid lg:grid-cols-2 gap-6 md:gap-10 lg:gap-12 items-center">
             <div>
-
               {/* Bar Chart */}
               <div className="relative flex items-end gap-1.5 md:gap-3 lg:gap-4 justify-center px-2 md:px-4">
                 {chartData.map((item, index) => (
@@ -186,9 +185,13 @@ export default function CostComparisonSection() {
                         }
                       }
                     />
-                    <p className="mt-1.5 md:mt-3 font-dm-sans font-medium text-[10px] md:text-sm lg:text-[14px] text-[#0176CE]">
-                      {item.company}
-                    </p>
+                   <Image
+                      src={item.logo}
+                      alt={item.company}
+                      width={40}
+                      height={40}
+                      className="mt-1.5 md:mt-3 w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 object-contain"
+                    />
                   </div>
                 ))}
               </div>
